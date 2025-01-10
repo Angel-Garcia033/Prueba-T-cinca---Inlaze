@@ -1,0 +1,4 @@
+# Ignorar los reportes de ejecución de la automatización
+target/site/
+target/failsafe-reports/
+target/maven-status/

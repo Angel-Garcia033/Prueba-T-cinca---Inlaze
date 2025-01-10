@@ -11,7 +11,7 @@ src/
 ├── test/
 │   ├── starter/
 │   │   ├── questions/            # Clases que contienen preguntas para verificar condiciones del sistema.
-│   │   ├── stepdefinitions/      # Definiciones de los pasos en los escenarios Gherkin.
+│   │   ├── stepdefinations/      # Definiciones de los pasos en los escenarios Gherkin.
 │   │   ├── task/                 # Tareas reutilizables en los scripts de automatización.
 │   │   └── ui/                   # Mapas de objetos de interfaz de usuario.
 │   ├── resources/
@@ -51,7 +51,7 @@ src/
 
 ## Dependencias
 
-El archivo `pom.xml` incluye las dependencias clave del proyecto:
+El archivo `pom.xml` incluye las dependencias clave del proyecto.
 
 ## Recursos
 

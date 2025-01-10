@@ -1,0 +1,66 @@
+-------------------------------------------------------------------------------
+Test set: starter.CucumberTestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 11.29 s <<< FAILURE! -- in starter.CucumberTestSuite
+Validar que se cumplan los requerimientos del usuario para la funcionalidad "Registro de Usuario".Validar que se pueda registrar exitosamente un usuario en el sistema cuando se cumplan todas las condiciones -- Time elapsed: 10.77 s <<< ERROR!
+org.openqa.selenium.InvalidElementStateException: 
+invalid element state
+  (Session info: chrome=131.0.6778.206)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0bc413e1a4e85b2f82bd03cd8f0be11, clearElement {id=f.557FFE11E104E19CE60AE27A1BB95FC3.d.7BA51DE7F5951EABE13F8CA2A1D3EB10.e.25}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.206, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\Esteban\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53856/devtoo..., se:cdpVersion: 131.0.6778.206, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f0bc413e1a4e85b2f82bd03cd8f0be11)] -> id: confirm-password]
+Session ID: f0bc413e1a4e85b2f82bd03cd8f0be11
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:130)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.lambda$type$2(WebElementFacadeImpl.java:745)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:22)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:27)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:27)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:27)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:27)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:27)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:27)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:27)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:27)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:27)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:27)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:27)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.type(WebElementFacadeImpl.java:744)
+	at net.serenitybdd.screenplay.actions.EnterValueIntoTarget.lambda$performAs$0(EnterValueIntoTarget.java:19)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at net.serenitybdd.screenplay.actions.EnterValueIntoTarget.performAs(EnterValueIntoTarget.java:18)
+	at net.serenitybdd.screenplay.actions.EnterValueIntoTarget$ByteBuddy$1exhtEIp.performAs$accessor$x3M3urgb(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:524)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:504)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:476)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:218)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at net.serenitybdd.screenplay.actions.EnterValueIntoTarget$ByteBuddy$1exhtEIp.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at starter.tasks.registroDeUsuario.SendRegistrationForm.performAs(SendRegistrationForm.java:32)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+	at net.serenitybdd.screenplay.Actor.performWithoutReporting(Actor.java:258)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at starter.stepdefinations.registroDeUsuario.SuccessfulRegistrationSteps.sendRegistrationForm(SuccessfulRegistrationSteps.java:48)
+	at ✽.envia el formulario de registro con los datos requeridos(file:///D:/Proyectos%20Programacion/Prueba-T-cinca---Inlaze/src/test/resources/features/01.RegistroDeUsuarios/RegistroDeUsuarios.feature:13)
+

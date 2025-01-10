@@ -1,0 +1,6 @@
+starter\CucumberTestSuite.class
+starter\questions\registroDeUsuario\UserRegistrationQuestions.class
+starter\tasks\registroDeUsuario\GoToRegistrationForm.class
+starter\stepdefinations\registroDeUsuario\SuccessfulRegistrationSteps.class
+starter\tasks\registroDeUsuario\SendRegistrationForm.class
+starter\ui\registroDeUsuario\UserRegistrationView.class
