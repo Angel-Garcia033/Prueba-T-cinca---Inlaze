@@ -21,7 +21,7 @@ public class SuccessfulLogoutSteps {
     // El paso And se hereda de SuccessfulLoginSteps
 
     @When("^el usuario cierra sesion de si perfil$")
-    public void sendLoginForm(DataTable dataTable) {
+    public void sendLoginForm() {
         theActorInTheSpotlight().attemptsTo(
                 new LogOut()
         );

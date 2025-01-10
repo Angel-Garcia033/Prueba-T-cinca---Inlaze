@@ -11,8 +11,8 @@ Feature: Validar que se cumplan los requerimientos del usuario para la funcional
     Given Juan Pérez tiene acceso al aplicativo
     And ingresa al formulario de registro de usuario nuevo
     When envia el formulario de registro con los datos requeridos
-      | Nombre         | Correo | Contrasena | Confirmar Contrasena |
-      | Usuario Prueba | prueba | Abc1234.   | Abc1234.             |
+      | Nombre     | Correo                 | Contrasena   | Confirmar Contrasena |
+      | Juan Pérez | juan-perez@example.com | Contraseña1! | Contraseña1!         |
     Then el sistema muestra un mensaje de confirmación de registro exitoso
       | Successful registration! |
 
@@ -34,7 +34,7 @@ Feature: Validar que se cumplan los requerimientos del usuario para la funcional
     And ingresa al formulario de registro de usuario nuevo
     When diligencia el formulario de registro con los datos requeridos
       | Nombre     | Correo         | Contrasena   | Confirmar Contrasena |
-      | Juan Pérez | juan.perez@com | Contraseña1! | Contraseña1!         |
+      | Juan Pérez | @comjuan.perez | Contraseña1! | Contraseña1!         |
     Then comprueba el estado del botón registrar
       | false |
 
@@ -43,9 +43,9 @@ Feature: Validar que se cumplan los requerimientos del usuario para la funcional
   Scenario: Validar que si se introduce un email ya registrado, se presente un mensaje de error y no permita registrar al usuario
     Given Juan Pérez tiene acceso al aplicativo
     And ingresa al formulario de registro de usuario nuevo
-    When diligencia el formulario de registro con los datos requeridos
+    When envia el formulario de registro con los datos requeridos
       | Nombre     | Correo                 | Contrasena   | Confirmar Contrasena |
-      | Juan Pérez | juan.perez@example.com | Contraseña1! | Contraseña1!         |
+      | Juan Pérez | juan-perez@example.com | Contraseña1! | Contraseña1!         |
     Then el sistema muestra un mensaje de error
       | The email is already registered. |
 
@@ -59,20 +59,20 @@ Feature: Validar que se cumplan los requerimientos del usuario para la funcional
       | false |
     Examples:
       | Nombre     | Correo                 | Contrasena   | ConfirmarContrasena |
-      | Juan Pérez | juan.perez@example.com | abc123       | abc123              |
-      | Juan Pérez | juan.perez@example.com | contraseña1! | contraseña1!        |
-      | Juan Pérez | juan.perez@example.com | CONTRASEÑA1! | CONTRASEÑA1!        |
-      | Juan Pérez | juan.perez@example.com | Contraseña1  | Contraseña1         |
-      | Juan Pérez | juan.perez@example.com | Contraseña!  | Contraseña!         |
+      | Juan Pérez | juan-perez@example.com | abc123       | abc123              |
+      | Juan Pérez | juan-perez@example.com | contraseña1! | contraseña1!        |
+      | Juan Pérez | juan-perez@example.com | CONTRASEÑA1! | CONTRASEÑA1!        |
+      | Juan Pérez | juan-perez@example.com | Contrasena1  | Contrasena1         |
+      | Juan Pérez | juan-perez@example.com | Contraseña!  | Contraseña!         |
 
   @ValidacionContrasenasNoCoinciden
        #ValidateErrorRegisterUserSteps
-  Scenario: Validar que si se introduce un email ya registrado, se presente un mensaje de error y no permita registrar al usuario
+  Scenario: Validar que si al registrar un usuario las contraseñas no coinciden, no se habilite el boton registrar
     Given Juan Pérez tiene acceso al aplicativo
     And ingresa al formulario de registro de usuario nuevo
     When diligencia el formulario de registro con los datos requeridos
       | Nombre     | Correo                 | Contrasena   | Confirmar Contrasena |
-      | Juan Pérez | juan.perez@example.com | Contraseña1! | Contraseña2!         |
+      | Juan Pérez | juan-perez@example.com | Contraseña1! | Contraseña2!         |
     Then el sistema indica que las contraseñas no coinciden
       | Passwords do not match |
     And comprueba el estado del botón registrar
@@ -89,7 +89,7 @@ Feature: Validar que se cumplan los requerimientos del usuario para la funcional
     Examples:
       | Nombre     | Correo                 | Contrasena   | ConfirmarContrasena |
       |            |                        |              |                     |
-      |            | juan.perez@example.com | Contraseña1! | Contraseña1!        |
+      |            | juan-perez@example.com | Contraseña1! | Contraseña1!        |
       | Juan Pérez |                        | Contraseña1! | Contraseña1!        |
-      | Juan Pérez | juan.perez@example.com |              | Contraseña1!        |
-      | Juan Pérez | juan.perez@example.com | Contraseña1! |                     |
+      | Juan Pérez | juan-perez@example.com |              | Contraseña1!        |
+      | Juan Pérez | juan-perez@example.com | Contraseña1! |                     |

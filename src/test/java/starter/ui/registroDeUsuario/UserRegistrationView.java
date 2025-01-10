@@ -11,9 +11,9 @@ public class UserRegistrationView {
     public static final Target EMAIL_FIELD = Target.the("Campo Correo")
             .located(By.id("email"));
     public static final Target PASSWORD_FIELD = Target.the("Campo Contraseña")
-            .located(By.id("password"));
+            .located(By.xpath("//input[@type='password'][1]"));
     public static final Target CONFIRM_PASSWORD_FIELD = Target.the("Campo Confirmar contraseña")
-            .located(By.id("confirm-password"));
+            .located(By.xpath("(//input[@type='password'])[2]"));
     public static final Target SIGN_UP_BUTTON = Target.the("Boton Sign up")
             .located(By.xpath("//button[contains(text(),' Sign up ')]"));
     public static final Target SUCCESSFUL_REGISTRATION_MESSAGE = Target.the("Mensaje Usuario registrado exitosamente")
