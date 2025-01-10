@@ -4,21 +4,28 @@
 
 Este proyecto implementa la automatización de los casos de prueba para las funcionalidades de **registro** y **login** utilizando Selenium con Java y Serenity BDD. La estructura está diseñada para facilitar la organización y escalabilidad del proyecto.
 
+## Documentación y Reporte de Bugs
+
+Toda la documentación relacionada con los casos de prueba que se automatizan en este proyecto, así como el reporte de los bugs hallados durante la automatización, se encuentra disponible en el siguiente enlace:
+
+[Documentación de Casos de Prueba y Reporte de Bugs](https://utopian-steel-744.notion.site/Prueba-T-cnica-Inlaze-176e20d7ce5780fdad28f7f9f9a98637?pvs=4)
+
 ## Estructura del Proyecto
 
 ```
 src/
 ├── test/
-│   ├── starter/
-│   │   ├── questions/            # Clases que contienen preguntas para verificar condiciones del sistema.
-│   │   ├── stepdefinations/      # Definiciones de los pasos en los escenarios Gherkin.
-│   │   ├── task/                 # Tareas reutilizables en los scripts de automatización.
-│   │   └── ui/                   # Mapas de objetos de interfaz de usuario.
+│   ├── java/
+│   │   ├── starter/
+│   │   │      ├── questions/            # Clases que contienen preguntas para verificar condiciones del sistema.
+│   │   │      ├── stepdefinations/      # Definiciones de los pasos en los escenarios Gherkin.
+│   │   │      ├── task/                 # Tareas reutilizables en los scripts de automatización.
+│   │   │      └── ui/                   # Mapas de objetos de interfaz de usuario.
 │   ├── resources/
-│   │   ├── features/             # Casos de prueba escritos en lenguaje Gherkin.
-│   │   └── serenity.conf         # Archivo de configuración de Serenity.
-├── README.md                     # Instrucciones del proyecto.
-└── pom.xml                       # Archivo de dependencias y configuración para Maven.
+│   │   ├── features/                    # Casos de prueba escritos en lenguaje Gherkin.
+│   │   └── serenity.conf                # Archivo de configuración de Serenity.
+├── README.md                            # Instrucciones del proyecto.
+└── pom.xml                              # Archivo de dependencias y configuración para Maven.
 ```
 
 ## Requisitos Previos
@@ -51,7 +58,49 @@ src/
 
 ## Dependencias
 
-El archivo `pom.xml` incluye las dependencias clave del proyecto.
+El archivo `pom.xml` incluye las dependencias clave del proyecto. A continuación se presenta un breve resumen de las dependencias:
+- **net.serenity-bdd:serenity-core**  
+  *Uso:* Proporciona el núcleo de Serenity BDD para la automatización de pruebas.
+
+- **net.serenity-bdd:serenity-cucumber**  
+  *Uso:* Integra Serenity BDD con Cucumber para escribir pruebas en lenguaje Gherkin.
+
+- **net.serenity-bdd:serenity-screenplay**  
+  *Uso:* Proporciona el patrón Screenplay para escribir pruebas más legibles y mantenibles.
+
+- **net.serenity-bdd:serenity-screenplay-webdriver**  
+  *Uso:* Extiende el patrón Screenplay para interactuar con navegadores web mediante WebDriver.
+
+- **net.serenity-bdd:serenity-ensure**  
+  *Uso:* Proporciona aserciones y verificaciones para las pruebas de Screenplay.
+
+### Gestión de Controladores y Navegadores
+- **io.github.bonigarcia:webdrivermanager**  
+  *Uso:* Gestiona automáticamente las versiones de los controladores de navegador para Selenium.
+
+### Plataforma de Ejecución de Pruebas
+- **org.junit.platform:junit-platform-launcher**  
+  *Uso:* Ejecuta pruebas en la plataforma JUnit.
+
+- **io.cucumber:cucumber-junit-platform-engine**  
+  *Uso:* Permite ejecutar pruebas de Cucumber en la plataforma JUnit.
+
+- **org.junit.platform:junit-platform-suite**  
+  *Uso:* Proporciona una suite de pruebas para JUnit.
+
+- **org.junit.jupiter:junit-jupiter-engine**  
+  *Uso:* Motor de ejecución para pruebas escritas con JUnit 5.
+
+- **org.junit.vintage:junit-vintage-engine**  
+  *Uso:* Permite ejecutar pruebas escritas con JUnit 4 en la plataforma JUnit 5.
+
+### Registro y Logs
+- **ch.qos.logback:logback-classic**  
+  *Uso:* Proporciona una implementación de registro para la salida de logs.
+
+### Aserciones
+- **org.assertj:assertj-core**  
+  *Uso:* Proporciona una biblioteca de aserciones fluida y rica para pruebas.
 
 ## Recursos
 

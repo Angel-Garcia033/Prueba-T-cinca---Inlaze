@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: starter.CucumberTestSuite
 -------------------------------------------------------------------------------
-Tests run: 21, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 198.5 s <<< FAILURE! -- in starter.CucumberTestSuite
-Validar que se cumplan los requerimientos del usuario para la funcionalidad "Registro de Usuario".Validar que si no se introduce un email con el formato correcto, no se habilite el boton registrar -- Time elapsed: 5.625 s <<< FAILURE!
+Tests run: 21, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 210.6 s <<< FAILURE! -- in starter.CucumberTestSuite
+Validar que se cumplan los requerimientos del usuario para la funcionalidad "Registro de Usuario".Validar que si no se introduce un email con el formato correcto, no se habilite el boton registrar -- Time elapsed: 6.897 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected: <false>
@@ -13,7 +13,7 @@ Expected: <false>
 	at starter.stepdefinations.registroDeUsuario.ValidationUserRequirementsSteps.validateSignUpButtonState(ValidationUserRequirementsSteps.java:50)
 	at ✽.comprueba el estado del botón registrar(file:///D:/Proyectos%20Programacion/Prueba-T-cinca---Inlaze/src/test/resources/features/01.RegistroDeUsuarios/RegistroDeUsuarios.feature:38)
 
-Validar que se cumplan los requerimientos del usuario para la funcionalidad "Registro de Usuario".Validar que si se introduce un email ya registrado, se presente un mensaje de error y no permita registrar al usuario -- Time elapsed: 16.62 s <<< FAILURE!
+Validar que se cumplan los requerimientos del usuario para la funcionalidad "Registro de Usuario".Validar que si se introduce un email ya registrado, se presente un mensaje de error y no permita registrar al usuario -- Time elapsed: 18.35 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected: an element that is visible
@@ -30,7 +30,7 @@ Expected: an element that is visible
 	at starter.stepdefinations.registroDeUsuario.ValidateErrorRegisterUserSteps.validateErrorRegisterUser(ValidateErrorRegisterUserSteps.java:27)
 	at ✽.el sistema muestra un mensaje de error(file:///D:/Proyectos%20Programacion/Prueba-T-cinca---Inlaze/src/test/resources/features/01.RegistroDeUsuarios/RegistroDeUsuarios.feature:49)
 
-Validar que se cumplan los requerimientos del usuario para la funcionalidad "Registro de Usuario".Validar que si no secumplen todas las condiciones para los campos "Contraseña" y "Confirmar contraseña", no se habilite el boton registrar #4 -- Time elapsed: 5.474 s <<< FAILURE!
+Validar que se cumplan los requerimientos del usuario para la funcionalidad "Registro de Usuario".Validar que si no secumplen todas las condiciones para los campos "Contraseña" y "Confirmar contraseña", no se habilite el boton registrar #4 -- Time elapsed: 5.470 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected: <false>
